@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Spring Boot App</title>
-<!--   <script src="css/cdn_tailwindcss_com_3_4_16.css"></script>   -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<!--  <script src="https://cdn.tailwindcss.com"></script>  -->
+    <link href="main.css" rel="stylesheet" />
 </head>
 <body class="bg-gray-100">
 <div class="min-h-full">
@@ -26,6 +26,7 @@
                             <a href="/projects" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
                             <a href="/user-form-template" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">User form</a>
                             <a href="/to-do" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">To do</a>
+                            <a href="/tail-wind" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Stile</a>
                         </div>
                     </div>
                 </div>

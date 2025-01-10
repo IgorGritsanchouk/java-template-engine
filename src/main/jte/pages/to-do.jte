@@ -9,7 +9,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${pageTitle}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link href="main.css" rel="stylesheet" />
 </head>
 <body class="bg-gray-50">
 <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">

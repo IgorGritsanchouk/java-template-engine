@@ -1,0 +1,15 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "tailwing css lib for jta template engine",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./styles.css -o ../resources/static/main.css",
+    "watch": "tailwindcss --watch -i ./styles.css -o ../resources/static/main.css"
+  },
+  "author": "Igor Gritsanchouk",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
