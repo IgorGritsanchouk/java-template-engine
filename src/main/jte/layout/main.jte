@@ -27,6 +27,17 @@
                             <a href="/user-form-template" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">User form</a>
                             <a href="/to-do" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">To do</a>
                             <a href="/tail-wind" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Stile</a>
+
+                            <form action="/change-language" method="post">
+                                <select name="language" id="language" onchange="this.form.submit()">
+                                    <option value="">choose language</option>
+                                    <option value="en">English</option>
+                                    <option value="fr">Français</option>
+                                    <option value="es">Español</option>
+                                    <option value="de">Deutsch</option>
+                                    <option value="it">Italiano</option>
+                                </select>
+                            </form>
                         </div>
                     </div>
                 </div>

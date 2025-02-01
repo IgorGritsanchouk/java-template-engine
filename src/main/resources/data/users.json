@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Philip",
+      "lastName": "Courtois",
+      "email": "philipc@gmail.com",
+      "country": "England",
+      "streetAddress": "Flat 10",
+      "city": "Maidenhead",
+      "region": "Berkshire",
+      "postalCode": "SL61RU"
+    },
+    {
+      "id": 2,
+      "firstName": "Martine",
+      "lastName": "Caster",
+      "email": "martine@gmail.com",
+      "country": "England",
+      "streetAddress": "Forlease Road 23",
+      "city": "Reading",
+      "region": "Berkshire",
+      "postalCode": "SL32RU"
+    },
+    {
+      "id": 3,
+      "firstName": "Alex",
+      "lastName": "Flexis",
+      "email": "alex@gmail.com",
+      "country": "England",
+      "streetAddress": "Market Street 11",
+      "city": "Reading",
+      "region": "Berkshire",
+      "postalCode": "RD32RU"
+    }
+  ]
+}
+
+
