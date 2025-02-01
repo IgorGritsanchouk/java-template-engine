@@ -2,12 +2,15 @@ package com.jte.controllers;
 
 import com.jte.domain.IgPage;
 import com.jte.domain.Page;
+import com.jte.util.MessageSourceWithLocale;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class JteController extends ParentController{
@@ -26,10 +29,13 @@ public class JteController extends ParentController{
     }
 
     @GetMapping("/layout-jte")
-    public String jteLayout(Model model){
-        IgPage igPage= new IgPage("Philip", "Title Phil Page", "Description For Layout");
+    public String jteLayout(HttpServletRequest request, Model model){
+        IgPage igPage= new IgPage("Philip", "Title Phil Page", "Description For Layout","fr");
         model.addAttribute("igPage", igPage);
-        return "layout";
+        Locale locale= getLocale(request);
+        MessageSourceWithLocale messageSourceWithLocale= new MessageSourceWithLocale(messageSource, locale);
+        model.addAttribute("messages", messageSourceWithLocale);
+        return "vmenu-la/layout";
     }
 
 

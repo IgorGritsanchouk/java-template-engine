@@ -17,7 +17,6 @@
         ${header}
     </div>
 @endif
-<h1>${page.getTitle()}</h1>
 <div class="content">
     ${content}
 </div>

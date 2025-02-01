@@ -1,11 +1,10 @@
 @param gg.jte.Content content
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Spring Boot App</title>
+    <title>JTE app</title>
 <!--  <script src="https://cdn.tailwindcss.com"></script>  -->
     <link href="main.css" rel="stylesheet" />
 </head>
@@ -27,6 +26,7 @@
                             <a href="/user-form-template" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">User form</a>
                             <a href="/to-do" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">To do</a>
                             <a href="/tail-wind" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Stile</a>
+                            <a href="/layout-jte" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">vertical-menu</a>
 
                             <form action="/change-language" method="post">
                                 <select name="language" id="language" onchange="this.form.submit()">
