@@ -12,6 +12,8 @@
     <title>${page.getTitle()}</title>
 </head>
 <body>
+<h1>${page.getTitle()}</h1>
+<h1>Does page contain: ${page.getLocale()}</h1>
 @if (header != null)
     <div class="header">
         ${header}
