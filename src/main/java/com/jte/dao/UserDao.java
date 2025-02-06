@@ -83,9 +83,6 @@ public class UserDao {
 
 
         String sql = "SELECT * FROM public.get_users_by_country('"+p_country_name+"')";
-       // List<User> users = jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(User.class));
-
-
         var rowMapper = BeanPropertyRowMapper.newInstance(User.class);
         var users = jdbcTemplate.query(sql, rowMapper);
 
@@ -93,6 +90,5 @@ public class UserDao {
         logger.info("users num: "+ users.size()+ "  country:"+ p_country_name);
 
         return users;
-        //return (List<User>) result.get("users");
     }
 }
