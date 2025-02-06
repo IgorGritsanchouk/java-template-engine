@@ -2,7 +2,6 @@ package com.jte.controllers;
 
 import com.jte.util.MessageSourceWithLocale;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
@@ -15,13 +14,15 @@ import java.util.List;
 import java.util.Locale;
 
 @Controller
-public class TemplateController {
+//@SessionAttributes("messages")
+public class TemplateController extends ParentController{
 
     private final Logger logger= LoggerFactory.getLogger(TemplateController.class);
-    private final MessageSource messageSource;
+    //private final MessageSource messageSource;
 
     public TemplateController(MessageSource messageSource){
-        this.messageSource= messageSource;
+        super(messageSource);
+        //this.messageSource= messageSource;
     }
 
 //    @GetMapping("/layout")
@@ -32,11 +33,11 @@ public class TemplateController {
 //        return "layout/main";
 //    }
 
-    @GetMapping("/")
+    @GetMapping("/start")
     public String home(HttpServletRequest request, Model model) {
-        Locale locale= getLocale(request);
-        MessageSourceWithLocale messageSourceWithLocale= new MessageSourceWithLocale(messageSource, locale);
-        model.addAttribute("messages", messageSourceWithLocale);
+        //Locale locale= getLocale(request);
+        //MessageSourceWithLocale messageSourceWithLocale= new MessageSourceWithLocale(messageSource, locale);
+        //model.addAttribute("messages", messageSourceWithLocale);
         return "pages/home";
     }
 
@@ -63,14 +64,14 @@ public class TemplateController {
         return "pages/projects";
     }
 
-    private Locale getLocale(HttpServletRequest request){
-        HttpSession session = request.getSession();
-        Locale locale = (Locale) session.getAttribute("locale");
-
-        if (locale == null) {
-            locale = Locale.ENGLISH;
-            session.setAttribute("locale", locale);
-        }
-        return locale;
-    }
+//    private Locale getLocale(HttpServletRequest request){
+//        HttpSession session = request.getSession();
+//        Locale locale = (Locale) session.getAttribute("locale");
+//
+//        if (locale == null) {
+//            locale = Locale.ENGLISH;
+//            session.setAttribute("locale", locale);
+//        }
+//        return locale;
+//    }
 }
