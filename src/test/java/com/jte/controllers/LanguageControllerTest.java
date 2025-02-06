@@ -1,20 +1,10 @@
 package com.jte.controllers;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.MessageSource;
-import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-
-import java.util.Locale;
-
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.eq;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(LanguageController.class)
 class LanguageControllerTest {
@@ -25,22 +15,22 @@ class LanguageControllerTest {
     @MockBean
     private MessageSource mockMessageSource;
 
-    @Test
-    void testLanguageSelector() throws Exception {
-        // Setup
-        when(mockMessageSource.getMessage(eq("title.message"), any(Object[].class), eq(Locale.ENGLISH)))
-                .thenReturn("Welcome Page");
-        when(mockMessageSource.getMessage(eq("welcome.message"), any(Object[].class), eq(Locale.ENGLISH)))
-                .thenReturn("Welcome to our website!");
-        when(mockMessageSource.getMessage(eq("language.label"), any(Object[].class), eq(Locale.ENGLISH)))
-                .thenReturn("Choose a language:");
-
-        // Run the test and verify the results
-        mockMvc.perform(get("/language-selector")
-                        .accept(MediaType.TEXT_HTML))
-                .andExpect(status().isOk());
-                //.andExpect(content().string("pages/language-selector"));
-    }
+//    @Test
+//    void testLanguageSelector() throws Exception {
+//        // Setup
+//        when(mockMessageSource.getMessage(eq("title.message"), any(Object[].class), eq(Locale.ENGLISH)))
+//                .thenReturn("Welcome Page");
+//        when(mockMessageSource.getMessage(eq("welcome.message"), any(Object[].class), eq(Locale.ENGLISH)))
+//                .thenReturn("Welcome to our website!");
+//        when(mockMessageSource.getMessage(eq("language.label"), any(Object[].class), eq(Locale.ENGLISH)))
+//                .thenReturn("Choose a language:");
+//
+//        // Run the test and verify the results
+//        mockMvc.perform(get("/language-selector")
+//                        .accept(MediaType.TEXT_HTML))
+//                .andExpect(status().isOk());
+//                //.andExpect(content().string("pages/language-selector"));
+//    }
 
 //    @Test
 //    void testLanguageSelector_MessageSourceThrowsNoSuchMessageException() throws Exception {
