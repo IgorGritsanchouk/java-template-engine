@@ -17,4 +17,8 @@ public class MessageSourceWithLocale {
     public String getInterMessage(String interMessage){
         return this.messageSource.getMessage(interMessage, null, locale);
     }
+
+    public String getInterMessage(String interMessage, String arg){
+        return this.messageSource.getMessage(interMessage, new Object[]{arg}, locale);
+    }
 }
