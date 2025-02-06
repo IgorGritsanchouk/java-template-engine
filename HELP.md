@@ -1,4 +1,7 @@
 # Getting Started  --  added internationalization
+install docker and then run
+PS C:\APP_DEV\java-template-engine>docker compose up
+to instantiate postgres data base as a container, to check tables and stored proc use link below:
 http://localhost:8081/browser/
 postgress client access url: 
 user:admin@admin.admin
@@ -14,11 +17,9 @@ SELECT * FROM GET_USERS_BY_COUNTRY('England');
 To run the application docker desktop is required to be installed
 1) docker compose up       --  to start postgres database
 2) And then start spring boot application  localhost:81 will display jte UI
-   http://localhost:81/user-form-vm    -- with vertical menu 
-3) http://localhost:81/user-form       -- without vertical menu
-http://localhost:81/language-selector    sample - ok
-http://localhost:81/welcome?language=fr
-http://localhost:81/welcome?language=de
+   http://localhost:81    -- with vertical menu
+3) http://localhost:81/user-form-vm    -- with vertical menu
+3)  http://localhost:81/home  -- without vertical menu
 http://localhost:8081/login?next=/browser/
 user:  admin@admin.admin
 pswd:  admin
@@ -111,7 +112,8 @@ Due to Maven's design, elements are inherited from the parent POM to the project
 While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
-========   Stored Proc and Func  exaples which could be called from DAO.java class ====
+========   Stored Proc and Func  examples which could be called from DAO.java class ====
+--------  worked ok. just an investigation  ----------
 
 CREATE OR REPLACE FUNCTION GET_USERS_BY_COUNTRY(p_country_name VARCHAR(50))
 RETURNS TABLE (id INT, first_name VARCHAR, last_name VARCHAR, email VARCHAR, country VARCHAR,
